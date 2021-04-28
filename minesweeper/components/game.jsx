@@ -12,13 +12,19 @@ class Game extends React.Component{
         this.updateGame = this.updateGame.bind(this);
     }
 
-    updateGame() {
+    updateGame(tile, boolean) {
+        if (boolean === true) {
+            tile.toggleFlag();
+        } else {
+            tile.explore();
+        }
 
+        this.setState({ board: this.state.board })
     }
 
     render() {
-        console.log("game.jsx");
-        debugger
+        
+        // debugger
         return (
             <h1>
                 <p></p>
