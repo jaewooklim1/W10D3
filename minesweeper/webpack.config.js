@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './react_minsweeper.jsx',
+    entry: './react_minesweeper.jsx',
     output: {
         //path requires absolute path 
         path: path.resolve(__dirname),
