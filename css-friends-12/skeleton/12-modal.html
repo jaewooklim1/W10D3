@@ -232,5 +232,52 @@
 
   </footer>
 
+  <div class="modal">
+    <div class="modal-screen">
+
+
+
+    </div>    
+    <form class="modal-form">
+
+      <div class="js-modal-close">&times;</div>
+      <h1>Welcome</h1>
+      <p>Please sign in to continue.</p>
+
+      <div class="input">         
+        <p>Email</p>
+        <input type="text" id="email-form" value="">
+        <p>Password</p>
+        <input type="text" id="password-form" value="">
+
+
+      </div>
+
+      <div class="submit">
+        <button>Sign In</button>
+
+        
+      </div>
+
+    </form>
+  </div>
+
+  <script src="../shared/js/jquery.js"></script>
+  <script>
+  $(function(){
+
+    $("body").on("click", ".js-modal-open", function(event){
+      event.preventDefault();
+      $(".modal").addClass("is-open");
+    });
+
+    $("body").on("click", ".js-modal-close", function(event){
+      event.preventDefault();
+      $(".modal").removeClass("is-open");
+    });
+
+  });
+  </script>
+
 </body>
 </html>
